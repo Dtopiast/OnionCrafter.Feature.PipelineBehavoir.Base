@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<Description>Provides a lightweight and versatile framework extension mediatr with components designed to enhance the capabilities of the Onion Architecture and CQRS pattern implementations. This project empowers developers with efficient pipeline behavior management and extends the architectural flexibility of .NET 7 applications, ensuring better control over request processing and response handling.</Description>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<RepositoryUrl>https://github.com/Dtopiast/OnionCrafter.Feature.PipelineBehavoir.Base</RepositoryUrl>
+		<PackageTags>architecture-enhancement, cqrs-pattern, pipeline-behavior, request-processing, response-handling, .net7, extension, mediatr</PackageTags>
+
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<IncludeSymbols>True</IncludeSymbols>
+		<Copyright>Copyright 2023 Dtopiast</Copyright>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+		<Version>$(VersionPrefix)</Version>
+		<Authors>Dtopiast</Authors>
+
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackageIcon>JustLogo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MediatR" Version="12.1.1" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="7.0.1" />
+		<PackageReference Include="OnionCrafter.Action.Request.Base" Version="1.0.0" />
+		<PackageReference Include="OnionCrafter.Action.Response.Base" Version="1.0.0" />
+		<PackageReference Include="OnionCrafter.Service.Base" Version="1.0.0" />
+		<PackageReference Include="OnionCrafter.Service.Option.Base" Version="1.0.0" />
+		<PackageReference Include="OnionCrafter.Util.Object" Version="1.0.0" />
+		<PackageReference Include="OnionCrafter.Wrapper.Request.Base" Version="1.0.0" />
+		<PackageReference Include="OnionCrafter.Wrapper.Response.Base" Version="1.0.0" />
+		<None Include="..\..\Images\JustLogo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\LICENSE.txt">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>

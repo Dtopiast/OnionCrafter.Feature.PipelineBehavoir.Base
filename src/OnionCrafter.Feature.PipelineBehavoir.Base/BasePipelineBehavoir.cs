@@ -24,17 +24,18 @@ namespace OnionCrafter.Feature.PipelineBehavoir.Base
         where TResponseData : class, IResponseData
         where TRequestData : class, IRequestData
     {
-
         /// <summary>
         /// Gets the name of the pipeline behavoir.
         /// </summary>
         public new string Name { get; protected set; }
+
         /// <summary>
         /// The response instance.
         /// </summary>
         protected TResponse _response;
+
         /// <summary>
-        /// The request instance. 
+        /// The request instance.
         /// </summary>
         protected TRequest _request;
 
@@ -70,7 +71,7 @@ namespace OnionCrafter.Feature.PipelineBehavoir.Base
         /// <param name="cancellationToken">The cancellation token.</param>
         public virtual async Task OnAfterExecuteAsync(CancellationToken cancellationToken = default)
         {
-             await Task.CompletedTask;
+            await Task.CompletedTask;
         }
 
         /// <summary>
@@ -87,7 +88,7 @@ namespace OnionCrafter.Feature.PipelineBehavoir.Base
         /// </summary>
         /// <typeparam name="TReturn">The type of the cloned instance.</typeparam>
         /// <returns>The cloned instance.</returns>
-        public new virtual TReturn Clone<TReturn>() where TReturn : IBaseService
+        public virtual new TReturn Clone<TReturn>() where TReturn : IBaseService
         {
             return (TReturn)MemberwiseClone();
         }
@@ -122,7 +123,7 @@ namespace OnionCrafter.Feature.PipelineBehavoir.Base
         protected BaseFeaturePipelineBehavior(IOptionsMonitor<TPipelineBehaviorOptions> options)
         {
             _pipelineBehaviorOptions = options.Get(Name);
-            Name = _pipelineBehaviorOptions.PipelineName ?? Name;
+            // Name = _pipelineBehaviorOptions.PipelineName ?? Name;
         }
     }
 }
